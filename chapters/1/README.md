@@ -40,7 +40,7 @@ You start counting ticks immediately, including any time spent turning before le
 
 ## Example
 
-Here is a smaller dungeon:
+Consider a smaller dungeon:
 
 ```
 ######]###]#
@@ -49,7 +49,7 @@ Here is a smaller dungeon:
 #####]######
 ```
 
-Below is a log of exploring the smaller dungeon. The position at each tick is marked `@`.
+Below is a log of exploring the smaller dungeon. Your position at each tick is marked `@`.
 
 ```
 Tick counter: 0
