@@ -1,6 +1,6 @@
 # Fungeon Call
 
 
-## Dungeons
+## Chapters
 
-- [Dungeon 1](dungeons/1)
+- [Chapter 1: Wallflower](chapters/1)
