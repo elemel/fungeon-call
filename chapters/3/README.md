@@ -95,15 +95,17 @@ After how many ticks do you leave the dungeon?
 Consider a smaller dungeon with two levels:
 
 ```
-##]}
-{(>}
-(<##
-#((#
+####]#]#
+}([.).{#
+(.>]<#>#
+({}[}>)#
+####{#}#
 
-##{[
-#)<#
-{.#{
-)#{#
+(#[#)]##
+[.)..({}
+[)<).]<#
+###}.<.#
+###])]##
 ```
 
 Below is a log of exploring the smaller dungeon. Your position at each tick is marked `@`.
@@ -113,32 +115,35 @@ Tick counter: 0
 Direction: North
 Level: 0
 
-##]}
-{(>}
-(@##
-#((#
+####]#]#
+}([.).{#
+(.>]@#>#
+({}[}>)#
+####{#}#
 
 ---
 
 Tick counter: 1
-Direction: Northwest
+Direction: Northeast
 Level: 0
 
-##]}
-{(>}
-(@##
-#((#
+####]#]#
+}([.).{#
+(.>]@#>#
+({}[}>)#
+####{#}#
 
 ---
 
 Tick counter: 2
-Direction: South
+Direction: Northeast
 Level: 0
 
-##]}
-{(>}
-(@##
-#((#
+####]#]#
+}([.)@{#
+(.>]<#>#
+({}[}>)#
+####{#}#
 
 ---
 
@@ -146,237 +151,713 @@ Tick counter: 3
 Direction: Southeast
 Level: 0
 
-##]}
-{(>}
-(@##
-#((#
+####]#]#
+}([.)@{#
+(.>]<#>#
+({}[}>)#
+####{#}#
 
 ---
 
 Tick counter: 4
-Direction: East
-Level: 0
+Direction: Southeast
+Level: 1
 
-##]}
-{(>}
-(@##
-#((#
+(#[#)]##
+[.)..({}
+[)<).]@#
+###}.<.#
+###])]##
 
 ---
 
 Tick counter: 5
-Direction: West
-Level: 0
+Direction: Northwest
+Level: 1
 
-##]}
-{(>}
-(@##
-#((#
+(#[#)]##
+[.)..({}
+[)<).]@#
+###}.<.#
+###])]##
 
 ---
 
 Tick counter: 6
-Direction: Southwest
-Level: 0
+Direction: West
+Level: 1
 
-##]}
-{(>}
-(@##
-#((#
+(#[#)]##
+[.)..({}
+[)<).]@#
+###}.<.#
+###])]##
 
 ---
 
 Tick counter: 7
-Direction: Northeast
-Level: 0
+Direction: North
+Level: 1
 
-##]}
-{(>}
-(@##
-#((#
+(#[#)]##
+[.)..({}
+[)<).]@#
+###}.<.#
+###])]##
 
 ---
 
 Tick counter: 8
-Direction: Northeast
+Direction: Southwest
 Level: 1
 
-##{[
-#)@#
-{.#{
-)#{#
+(#[#)]##
+[.)..({}
+[)<).]@#
+###}.<.#
+###])]##
 
 ---
 
 Tick counter: 9
-Direction: Northwest
-Level: 1
+Direction: Southwest
+Level: 0
 
-##{[
-#)@#
-{.#{
-)#{#
+####]#]#
+}([.).{#
+(.>]<#>#
+({}[}@)#
+####{#}#
 
 ---
 
 Tick counter: 10
-Direction: Southeast
-Level: 1
+Direction: East
+Level: 0
 
-##{[
-#)@#
-{.#{
-)#{#
+####]#]#
+}([.).{#
+(.>]<#>#
+({}[}@)#
+####{#}#
 
 ---
 
 Tick counter: 11
-Direction: North
-Level: 1
+Direction: Southeast
+Level: 0
 
-##{[
-#)@#
-{.#{
-)#{#
+####]#]#
+}([.).{#
+(.>]<#>#
+({}[}@)#
+####{#}#
 
 ---
 
 Tick counter: 12
-Direction: Southwest
-Level: 1
+Direction: West
+Level: 0
 
-##{[
-#)@#
-{.#{
-)#{#
+####]#]#
+}([.).{#
+(.>]<#>#
+({}[}@)#
+####{#}#
 
 ---
 
 Tick counter: 13
-Direction: Southwest
-Level: 1
+Direction: Northeast
+Level: 0
 
-##{[
-#)<#
-{@#{
-)#{#
+####]#]#
+}([.).{#
+(.>]<#>#
+({}[}@)#
+####{#}#
 
 ---
 
 Tick counter: 14
-Direction: West
+Direction: Northeast
 Level: 1
 
-##{[
-#)<#
-{@#{
-)#{#
+(#[#)]##
+[.)..({}
+[)<).]@#
+###}.<.#
+###])]##
 
 ---
 
 Tick counter: 15
-Direction: Southeast
+Direction: South
 Level: 1
 
-##{[
-#)<#
-{@#{
-)#{#
+(#[#)]##
+[.)..({}
+[)<).]@#
+###}.<.#
+###])]##
 
 ---
 
 Tick counter: 16
-Direction: North
+Direction: South
 Level: 1
 
-##{[
-#)<#
-{@#{
-)#{#
+(#[#)]##
+[.)..({}
+[)<).]<#
+###}.<@#
+###])]##
 
 ---
 
 Tick counter: 17
-Direction: Northeast
+Direction: North
 Level: 1
 
-##{[
-#)<#
-{@#{
-)#{#
+(#[#)]##
+[.)..({}
+[)<).]<#
+###}.<@#
+###])]##
 
 ---
 
 Tick counter: 18
-Direction: Northeast
+Direction: North
 Level: 0
 
-##]}
-{(@}
-(<##
-#((#
+####]#]#
+}([.).{#
+(.>]<#@#
+({}[}>)#
+####{#}#
 
 ---
 
 Tick counter: 19
-Direction: South
+Direction: Southwest
 Level: 0
 
-##]}
-{(@}
-(<##
-#((#
+####]#]#
+}([.).{#
+(.>]<#@#
+({}[}>)#
+####{#}#
 
 ---
 
 Tick counter: 20
-Direction: North
-Level: 0
+Direction: Southwest
+Level: 1
 
-##]}
-{(@}
-(<##
-#((#
+(#[#)]##
+[.)..({}
+[)<).]<#
+###}.@.#
+###])]##
 
 ---
 
 Tick counter: 21
-Direction: East
-Level: 0
+Direction: West
+Level: 1
 
-##]}
-{(@}
-(<##
-#((#
+(#[#)]##
+[.)..({}
+[)<).]<#
+###}.@.#
+###])]##
 
 ---
 
 Tick counter: 22
-Direction: Southwest
-Level: 0
+Direction: West
+Level: 1
 
-##]}
-{(@}
-(<##
-#((#
+(#[#)]##
+[.)..({}
+[)<).]<#
+###}@<.#
+###])]##
 
 ---
 
 Tick counter: 23
+Direction: Northeast
+Level: 1
+
+(#[#)]##
+[.)..({}
+[)<).]<#
+###}@<.#
+###])]##
+
+---
+
+Tick counter: 24
+Direction: Southeast
+Level: 1
+
+(#[#)]##
+[.)..({}
+[)<).]<#
+###}@<.#
+###])]##
+
+---
+
+Tick counter: 25
 Direction: Southwest
+Level: 1
+
+(#[#)]##
+[.)..({}
+[)<).]<#
+###}@<.#
+###])]##
+
+---
+
+Tick counter: 26
+Direction: Northwest
+Level: 1
+
+(#[#)]##
+[.)..({}
+[)<).]<#
+###}@<.#
+###])]##
+
+---
+
+Tick counter: 27
+Direction: North
+Level: 1
+
+(#[#)]##
+[.)..({}
+[)<).]<#
+###}@<.#
+###])]##
+
+---
+
+Tick counter: 28
+Direction: North
+Level: 1
+
+(#[#)]##
+[.)..({}
+[)<)@]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 29
+Direction: North
+Level: 1
+
+(#[#)]##
+[.).@({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 30
+Direction: Northeast
+Level: 1
+
+(#[#)]##
+[.).@({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 31
+Direction: Southeast
+Level: 1
+
+(#[#)]##
+[.).@({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 32
+Direction: Southwest
+Level: 1
+
+(#[#)]##
+[.).@({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 33
+Direction: West
+Level: 1
+
+(#[#)]##
+[.).@({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 34
+Direction: West
+Level: 1
+
+(#[#)]##
+[.)@.({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 35
+Direction: Northwest
+Level: 1
+
+(#[#)]##
+[.)@.({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 36
+Direction: Southwest
+Level: 1
+
+(#[#)]##
+[.)@.({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 37
+Direction: Southwest
+Level: 0
+
+####]#]#
+}([.).{#
+(.@]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 38
+Direction: East
+Level: 0
+
+####]#]#
+}([.).{#
+(.@]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 39
+Direction: South
+Level: 0
+
+####]#]#
+}([.).{#
+(.@]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 40
+Direction: Northwest
+Level: 0
+
+####]#]#
+}([.).{#
+(.@]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 41
+Direction: West
+Level: 0
+
+####]#]#
+}([.).{#
+(.@]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 42
+Direction: West
+Level: 0
+
+####]#]#
+}([.).{#
+(@>]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 43
+Direction: Southwest
+Level: 0
+
+####]#]#
+}([.).{#
+(@>]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 44
+Direction: South
+Level: 0
+
+####]#]#
+}([.).{#
+(@>]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 45
+Direction: Northeast
+Level: 0
+
+####]#]#
+}([.).{#
+(@>]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 46
+Direction: Northwest
+Level: 0
+
+####]#]#
+}([.).{#
+(@>]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 47
+Direction: East
+Level: 0
+
+####]#]#
+}([.).{#
+(@>]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 48
+Direction: East
+Level: 1
+
+(#[#)]##
+[.)..({}
+[)@).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 49
+Direction: Southeast
+Level: 1
+
+(#[#)]##
+[.)..({}
+[)@).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 50
+Direction: West
+Level: 1
+
+(#[#)]##
+[.)..({}
+[)@).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 51
+Direction: Northwest
+Level: 1
+
+(#[#)]##
+[.)..({}
+[)@).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 52
+Direction: Northwest
+Level: 1
+
+(#[#)]##
+[@)..({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 53
+Direction: West
+Level: 1
+
+(#[#)]##
+[@)..({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 54
+Direction: South
+Level: 1
+
+(#[#)]##
+[@)..({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 55
+Direction: Southwest
+Level: 1
+
+(#[#)]##
+[@)..({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 56
+Direction: Southeast
+Level: 1
+
+(#[#)]##
+[@)..({}
+[)<).]<#
+###}.<.#
+###])]##
+
+---
+
+Tick counter: 57
+Direction: Southeast
+Level: 0
+
+####]#]#
+}([.).{#
+(.@]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 58
+Direction: Northeast
+Level: 0
+
+####]#]#
+}([.).{#
+(.@]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 59
+Direction: Northeast
+Level: 0
+
+####]#]#
+}([@).{#
+(.>]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 60
+Direction: Southeast
+Level: 0
+
+####]#]#
+}([@).{#
+(.>]<#>#
+({}[}>)#
+####{#}#
+
+---
+
+Tick counter: 61
+Direction: Southeast
 Level: -1
 
 ---
 
 Symbol counters:
-  #  4
-  (  4
-  )  2
-  .  1
-  <  2
-  >  1
-  [  1
-  ]  1
+  #  2
+  (  5
+  )  10
+  .  9
+  <  5
+  >  4
+  [  5
+  ]  9
   {  5
-  }  2
+  }  7
 ```
