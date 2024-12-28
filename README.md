@@ -6,3 +6,10 @@
 - [Chapter 1: Wallflower](chapters/1)
 - [Chapter 2: Shortcut](chapters/2)
 - [Chapter 3: Staredown](chapters/3)
+
+
+## Answers
+
+- [Answer to chapter 1](answers/chapters/1.txt)
+- [Answer to chapter 2](answers/chapters/2.txt)
+- [Answer to chapter 3](answers/chapters/3.txt)
