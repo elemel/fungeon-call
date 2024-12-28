@@ -1,5 +1,7 @@
 # Chapter 1: Wallflower
 
+You have entered a dungeon, struggling to find your bearings using a conveniently provided map:
+
 ```
 ##########[###########]##############][#######]#[####################]########
 ###.]......]####]##[...############][....[#]#]....[################[...##]####
@@ -29,13 +31,13 @@
 #[#]#######[#############[#####[]###]###[#######]#####]#################[#]###
 ```
 
-You have entered a dungeon. You are still standing at the bottom of the staircase where you entered (marked `<` on the map), facing north (up on the map). Before leaving the dungeon, you are compelled to explore it.
+You are still standing at the bottom of the staircase where you entered (marked `<` on the map), facing north (up on the map). Before leaving the dungeon, you are compelled to explore it.
 
 You can walk on the floor tiles (marked `.` on the map). You always walk forward if you can, without turning. Walking to the next tile takes one tick of dungeon time.
 
-Whenever you are about to walk into a wall (marked `[`, `#`, or `]` on the map), you instead stay where you are and turn. You turn 90 degrees left in front of `[` walls, 180 degrees around in front of `#` walls, and 90 degrees right in front of `]` walls. Staying and turning also takes one tick. If you still face a wall after turning, that is handled during the next tick.
+Whenever you are about to walk into a wall (marked `[`, `#`, or `]` on the map), you instead stay where you are and turn. You turn 90 degrees left in front of `[` walls, 180 degrees around in front of `#` walls, and 90 degrees right in front of `]` walls. Staying and turning also takes one tick. Never mind if you still face a wall after turning. You can worry about that during the next tick.
 
-You start counting ticks immediately, including any time spent turning before leaving the staircase. After how many ticks do you return to the staircase?
+You start counting ticks immediately, including any time spent turning before leaving the staircase. You leave the dungeon by returning to the staircase. After how many ticks do you leave the dungeon?
 
 
 ## Example
@@ -43,10 +45,11 @@ You start counting ticks immediately, including any time spent turning before le
 Consider a smaller dungeon:
 
 ```
-######]###]#
-#]##].....<#
-[......[####
-#####]######
+#[###]##
+#....<.[
+#.]....#
+]....#]#
+###[####
 ```
 
 Below is a log of exploring the smaller dungeon. Your position at each tick is marked `@`.
@@ -54,318 +57,364 @@ Below is a log of exploring the smaller dungeon. Your position at each tick is m
 ```
 Tick counter: 0
 Direction: North
+Level: 0
 
-######]###]#
-#]##].....@#
-[......[####
-#####]######
+#[###]##
+#....@.[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 1
 Direction: East
+Level: 0
 
-######]###]#
-#]##].....@#
-[......[####
-#####]######
+#[###]##
+#....@.[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 2
-Direction: West
+Direction: East
+Level: 0
 
-######]###]#
-#]##].....@#
-[......[####
-#####]######
+#[###]##
+#....<@[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 3
-Direction: West
+Direction: North
+Level: 0
 
-######]###]#
-#]##]....@<#
-[......[####
-#####]######
+#[###]##
+#....<@[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 4
-Direction: West
+Direction: South
+Level: 0
 
-######]###]#
-#]##]...@.<#
-[......[####
-#####]######
+#[###]##
+#....<@[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 5
-Direction: West
+Direction: South
+Level: 0
 
-######]###]#
-#]##]..@..<#
-[......[####
-#####]######
+#[###]##
+#....<.[
+#.]...@#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 6
 Direction: West
+Level: 0
 
-######]###]#
-#]##].@...<#
-[......[####
-#####]######
+#[###]##
+#....<.[
+#.]...@#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 7
 Direction: West
+Level: 0
 
-######]###]#
-#]##]@....<#
-[......[####
-#####]######
+#[###]##
+#....<.[
+#.]..@.#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 8
-Direction: North
+Direction: West
+Level: 0
 
-######]###]#
-#]##]@....<#
-[......[####
-#####]######
+#[###]##
+#....<.[
+#.].@..#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 9
-Direction: South
+Direction: West
+Level: 0
 
-######]###]#
-#]##]@....<#
-[......[####
-#####]######
+#[###]##
+#....<.[
+#.]@...#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 10
-Direction: South
+Direction: North
+Level: 0
 
-######]###]#
-#]##].....<#
-[....@.[####
-#####]######
+#[###]##
+#....<.[
+#.]@...#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 11
-Direction: West
+Direction: North
+Level: 0
 
-######]###]#
-#]##].....<#
-[....@.[####
-#####]######
+#[###]##
+#..@.<.[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 12
-Direction: West
+Direction: South
+Level: 0
 
-######]###]#
-#]##].....<#
-[...@..[####
-#####]######
+#[###]##
+#..@.<.[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 13
-Direction: West
+Direction: South
+Level: 0
 
-######]###]#
-#]##].....<#
-[..@...[####
-#####]######
+#[###]##
+#....<.[
+#.]@...#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 14
-Direction: West
+Direction: South
+Level: 0
 
-######]###]#
-#]##].....<#
-[.@....[####
-#####]######
+#[###]##
+#....<.[
+#.]....#
+]..@.#]#
+###[####
 
 ---
 
 Tick counter: 15
-Direction: West
+Direction: East
+Level: 0
 
-######]###]#
-#]##].....<#
-[@.....[####
-#####]######
+#[###]##
+#....<.[
+#.]....#
+]..@.#]#
+###[####
 
 ---
 
 Tick counter: 16
-Direction: South
+Direction: East
+Level: 0
 
-######]###]#
-#]##].....<#
-[@.....[####
-#####]######
+#[###]##
+#....<.[
+#.]....#
+]...@#]#
+###[####
 
 ---
 
 Tick counter: 17
-Direction: North
+Direction: West
+Level: 0
 
-######]###]#
-#]##].....<#
-[@.....[####
-#####]######
+#[###]##
+#....<.[
+#.]....#
+]...@#]#
+###[####
 
 ---
 
 Tick counter: 18
-Direction: East
+Direction: West
+Level: 0
 
-######]###]#
-#]##].....<#
-[@.....[####
-#####]######
+#[###]##
+#....<.[
+#.]....#
+]..@.#]#
+###[####
 
 ---
 
 Tick counter: 19
-Direction: East
+Direction: West
+Level: 0
 
-######]###]#
-#]##].....<#
-[.@....[####
-#####]######
+#[###]##
+#....<.[
+#.]....#
+].@..#]#
+###[####
 
 ---
 
 Tick counter: 20
-Direction: East
+Direction: West
+Level: 0
 
-######]###]#
-#]##].....<#
-[..@...[####
-#####]######
+#[###]##
+#....<.[
+#.]....#
+]@...#]#
+###[####
 
 ---
 
 Tick counter: 21
-Direction: East
+Direction: North
+Level: 0
 
-######]###]#
-#]##].....<#
-[...@..[####
-#####]######
+#[###]##
+#....<.[
+#.]....#
+]@...#]#
+###[####
 
 ---
 
 Tick counter: 22
-Direction: East
+Direction: North
+Level: 0
 
-######]###]#
-#]##].....<#
-[....@.[####
-#####]######
+#[###]##
+#....<.[
+#@]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 23
-Direction: East
+Direction: North
+Level: 0
 
-######]###]#
-#]##].....<#
-[.....@[####
-#####]######
+#[###]##
+#@...<.[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 24
-Direction: North
+Direction: West
+Level: 0
 
-######]###]#
-#]##].....<#
-[.....@[####
-#####]######
+#[###]##
+#@...<.[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 25
-Direction: North
+Direction: East
+Level: 0
 
-######]###]#
-#]##].@...<#
-[......[####
-#####]######
+#[###]##
+#@...<.[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 26
 Direction: East
+Level: 0
 
-######]###]#
-#]##].@...<#
-[......[####
-#####]######
+#[###]##
+#.@..<.[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 27
 Direction: East
+Level: 0
 
-######]###]#
-#]##]..@..<#
-[......[####
-#####]######
+#[###]##
+#..@.<.[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 28
 Direction: East
+Level: 0
 
-######]###]#
-#]##]...@.<#
-[......[####
-#####]######
+#[###]##
+#...@<.[
+#.]....#
+]....#]#
+###[####
 
 ---
 
 Tick counter: 29
 Direction: East
-
-######]###]#
-#]##]....@<#
-[......[####
-#####]######
-
----
-
-Tick counter: 30
-Direction: East
-
-######]###]#
-#]##].....@#
-[......[####
-#####]######
+Level: -1
 
 ---
 
 Symbol counters:
-  #  3
-  .  19
+  #  4
+  .  17
   <  1
-  [  2
-  ]  5
+  [  3
+  ]  4
 ```
+
+You leave the smaller dungeon after 29 ticks.
