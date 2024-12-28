@@ -85,11 +85,11 @@ You have entered the third dungeon. In this dungeon, there are multiple levels, 
 ######}#}[]}#}#}#{#{{#}##(((#}################]###{######[#######[###]######)#
 ```
 
-The levels in the map are ordered from top to bottom. You are standing at the bottom of the staircase where you entered (marked `<` on the top level of the map), facing north.
+The top level is at the top of the map, and the bottom level is at the bottom of the map. You are facing north, standing on the top level, at the bottom of the staircase where you entered (marked `<`).
 
-There are many other staircases on the top level, leading down (marked `>`). The bottom end of each staircase (marked `<`) leads back up to the top end. Whenever you walk onto a staircase (top or bottom), you immediately follow it to the other end during the same tick. You end the tick standing on the other end of the staircase, facing the same direction as before.
+There are many other staircases in this dungeon. Each staircase has two ends: a top (marked `>`) and a bottom (marked `<`). The bottom is located directly below the top, on the next lower level. Whenever you walk onto either end of a staircase, you immediately follow it to the other end during the same tick. You end the tick standing at the other end of the staircase, facing the same direction as before.
 
-You leave the dungeon by walking onto the staircase where you entered. After how many ticks do you leave the dungeon?
+You leave the dungeon by returning to the staircase where you entered. After how many ticks do you leave the dungeon?
 
 
 ## Example
@@ -863,3 +863,5 @@ Symbol counters:
   {  5
   }  7
 ```
+
+You leave the smaller dungeon after 61 ticks.
