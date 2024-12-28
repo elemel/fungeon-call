@@ -1,6 +1,6 @@
 # Chapter 1: Wallflower
 
-You have entered a dungeon, struggling to find your bearings using a conveniently provided map:
+You have entered a dungeon. You struggle to find your bearings using a conveniently provided map:
 
 ```
 ##########[###########]##############][#######]#[####################]########
@@ -33,9 +33,9 @@ You have entered a dungeon, struggling to find your bearings using a convenientl
 
 You are still standing at the bottom of the staircase where you entered (marked `<` on the map), facing north (up on the map). Before leaving the dungeon, you are compelled to explore it.
 
-You can walk on the floor tiles (marked `.` on the map). You always walk forward if you can, without turning. Walking to the next tile takes one tick of dungeon time.
+You can walk on the floor tiles (marked `.`). You always walk forward if you can, without turning. Walking to the next tile takes one tick of dungeon time.
 
-Whenever you are about to walk into a wall (marked `[`, `#`, or `]` on the map), you instead stay where you are and turn. You turn 90 degrees left in front of `[` walls, 180 degrees around in front of `#` walls, and 90 degrees right in front of `]` walls. Staying and turning also takes one tick. Never mind if you still face a wall after turning. You can worry about that during the next tick.
+Whenever you are about to walk into a wall (marked `[`, `#`, or `]`), you instead stay where you are and turn. You turn 90 degrees left in front of `[` walls, 180 degrees around in front of `#` walls, and 90 degrees right in front of `]` walls. Staying and turning also takes one tick. Never mind if you still face a wall after turning. You can worry about that during the next tick.
 
 You start counting ticks immediately, including any time spent turning before leaving the staircase. You leave the dungeon by returning to the staircase. After how many ticks do you leave the dungeon?
 

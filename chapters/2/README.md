@@ -1,5 +1,7 @@
 # Chapter 2: Shortcut
 
+You have entered another dungeon. You are standing at the bottom of the staircase where you entered, facing north. You study the provided map:
+
 ```
 ########}{{#############({[#(######]}##]#############]#]##)#}}{})]#]##########
 ########].(#####[})####{].)...#}{#)..[..]#########)#...()].{).[..[.)}#########
@@ -29,13 +31,11 @@
 ######[{)#######]#}###########)############{#]{##{}]#([])#)#]##]####}#########
 ```
 
-You have entered another dungeon. You are again facing north, standing at the bottom of the staircase where you entered.
+In this dungeon, there are additional wall types for turning diagonally (marked `{`, `(`, `)`, or `}` on the map). You turn 135 degrees left in front of `{` walls, 45 degrees left in front of `(` walls, 45 degrees right in front of `)` walls, and 135 degrees right in front of `}` walls. As before, you always walk forward if you can. Walking forward can now also mean walking in a diagonal direction (southwest, northwest, northeast, or southeast).
 
-In this dungeon, there are additional wall types for turning diagonally (marked `{`, `(`, `)`, and `}` on the map). While facing a diagonal direction, the tile in front of you is the next tile in the diagonal direction. As before, you always walk forward if you can. You turn 135 degrees left in front of `{` walls, 45 degrees left in front of `(` walls, 45 degrees right in front of `)` walls, and 135 degrees right in front of `}` walls.
+The cardinal walls (marked `[`, `#`, or `]`) have the same effect as before. They can now also make you turn from one diagonal direction to another.
 
-The cardinal turns (marked `[`, `#`, and `]`) have the same effect as before, but can now also cause you to turn between two diagonal directions.
-
-After how many ticks do you return to the staircase? You should still include any initial time spent turning before leaving the staircase.
+You leave the dungeon by returning to the staircase. After how many ticks do you leave the dungeon?
 
 
 ## Example
@@ -43,12 +43,11 @@ After how many ticks do you return to the staircase? You should still include an
 Consider a smaller dungeon:
 
 ```
-{##[##
-#.{.(#
-{...]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#.[
+#)#...[(
+###[)([#
 ```
 
 Below is a log of exploring the smaller dungeon. Your position at each tick is marked `@`.
@@ -56,336 +55,440 @@ Below is a log of exploring the smaller dungeon. Your position at each tick is m
 ```
 Tick counter: 0
 Direction: North
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#].{@#
-###.})
-###))#
+{{#}{){#
+#.(@..(]
+[#.{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 1
-Direction: East
+Direction: Southeast
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#].{@#
-###.})
-###))#
+{{#}{){#
+#.(@..(]
+[#.{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 2
-Direction: West
+Direction: Northeast
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#].{@#
-###.})
-###))#
+{{#}{){#
+#.(@..(]
+[#.{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 3
-Direction: Southeast
+Direction: West
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#].{@#
-###.})
-###))#
+{{#}{){#
+#.(@..(]
+[#.{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 4
-Direction: South
+Direction: Southwest
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#].{@#
-###.})
-###))#
+{{#}{){#
+#.(@..(]
+[#.{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 5
-Direction: Northwest
+Direction: Southwest
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#].{@#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#@{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 6
-Direction: Northwest
+Direction: West
+Level: 0
 
-{##[##
-#.{.(#
-{..@]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#@{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 7
-Direction: South
+Direction: East
+Level: 0
 
-{##[##
-#.{.(#
-{..@]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#@{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 8
-Direction: Northeast
+Direction: Northwest
+Level: 0
 
-{##[##
-#.{.(#
-{..@]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#@{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 9
-Direction: North
+Direction: Northwest
+Level: 0
 
-{##[##
-#.{.(#
-{..@]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#@(<..(]
+[#.{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 10
-Direction: North
+Direction: South
+Level: 0
 
-{##[##
-#.{@(#
-{...]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#@(<..(]
+[#.{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 11
-Direction: West
+Direction: North
+Level: 0
 
-{##[##
-#.{@(#
-{...]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#@(<..(]
+[#.{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 12
-Direction: Southeast
+Direction: Southwest
+Level: 0
 
-{##[##
-#.{@(#
-{...]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#@(<..(]
+[#.{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 13
-Direction: Southwest
+Direction: Southeast
+Level: 0
 
-{##[##
-#.{@(#
-{...]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#@(<..(]
+[#.{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 14
-Direction: Southwest
+Direction: Southeast
+Level: 0
 
-{##[##
-#.{.(#
-{.@.]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#@{[#.[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 15
-Direction: Northwest
+Direction: Southeast
+Level: 0
 
-{##[##
-#.{.(#
-{.@.]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#.[
+#)#@..[(
+###[)([#
 
 ---
 
 Tick counter: 16
-Direction: Northwest
+Direction: South
+Level: 0
 
-{##[##
-#@{.(#
-{...]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#.[
+#)#@..[(
+###[)([#
 
 ---
 
 Tick counter: 17
-Direction: South
+Direction: East
+Level: 0
 
-{##[##
-#@{.(#
-{...]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#.[
+#)#@..[(
+###[)([#
 
 ---
 
 Tick counter: 18
-Direction: South
+Direction: East
+Level: 0
 
-{##[##
-#.{.(#
-{@..]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#.[
+#)#.@.[(
+###[)([#
 
 ---
 
 Tick counter: 19
-Direction: West
+Direction: East
+Level: 0
 
-{##[##
-#.{.(#
-{@..]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#.[
+#)#..@[(
+###[)([#
 
 ---
 
 Tick counter: 20
-Direction: Southeast
+Direction: North
+Level: 0
 
-{##[##
-#.{.(#
-{@..]#
-#].{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#.[
+#)#..@[(
+###[)([#
 
 ---
 
 Tick counter: 21
-Direction: Southeast
+Direction: South
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#]@{<#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#.[
+#)#..@[(
+###[)([#
 
 ---
 
 Tick counter: 22
 Direction: Southeast
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#].{<#
-###@})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#.[
+#)#..@[(
+###[)([#
 
 ---
 
 Tick counter: 23
-Direction: South
+Direction: Northeast
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#].{<#
-###@})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#.[
+#)#..@[(
+###[)([#
 
 ---
 
 Tick counter: 24
-Direction: Southwest
+Direction: Northeast
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#].{<#
-###@})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#@[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 25
-Direction: Northeast
+Direction: Southeast
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#].{<#
-###@})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#@[
+#)#...[(
+###[)([#
 
 ---
 
 Tick counter: 26
-Direction: Northeast
+Direction: East
+Level: 0
 
-{##[##
-#.{.(#
-{...]#
-#].{@#
-###.})
-###))#
+{{#}{){#
+#.(<..(]
+[#.{[#@[
+#)#...[(
+###[)([#
+
+---
+
+Tick counter: 27
+Direction: North
+Level: 0
+
+{{#}{){#
+#.(<..(]
+[#.{[#@[
+#)#...[(
+###[)([#
+
+---
+
+Tick counter: 28
+Direction: Northwest
+Level: 0
+
+{{#}{){#
+#.(<..(]
+[#.{[#@[
+#)#...[(
+###[)([#
+
+---
+
+Tick counter: 29
+Direction: Northwest
+Level: 0
+
+{{#}{){#
+#.(<.@(]
+[#.{[#.[
+#)#...[(
+###[)([#
+
+---
+
+Tick counter: 30
+Direction: South
+Level: 0
+
+{{#}{){#
+#.(<.@(]
+[#.{[#.[
+#)#...[(
+###[)([#
+
+---
+
+Tick counter: 31
+Direction: North
+Level: 0
+
+{{#}{){#
+#.(<.@(]
+[#.{[#.[
+#)#...[(
+###[)([#
+
+---
+
+Tick counter: 32
+Direction: Northeast
+Level: 0
+
+{{#}{){#
+#.(<.@(]
+[#.{[#.[
+#)#...[(
+###[)([#
+
+---
+
+Tick counter: 33
+Direction: West
+Level: 0
+
+{{#}{){#
+#.(<.@(]
+[#.{[#.[
+#)#...[(
+###[)([#
+
+---
+
+Tick counter: 34
+Direction: West
+Level: 0
+
+{{#}{){#
+#.(<@.(]
+[#.{[#.[
+#)#...[(
+###[)([#
+
+---
+
+Tick counter: 35
+Direction: West
+Level: -1
 
 ---
 
 Symbol counters:
-  #  2
-  (  1
+  #  4
+  (  4
   )  3
-  .  7
+  .  9
   <  1
-  [  1
-  ]  4
+  [  6
+  ]  1
   {  6
   }  1
 ```
+
+You leave the smaller dungeon after 35 ticks.

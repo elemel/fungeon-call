@@ -1,5 +1,7 @@
 # Chapter 3: Staredown
 
+You have entered the third dungeon. In this dungeon, there are multiple levels, separated by single blank lines on the map:
+
 ```
 #){[#}#]#######]##)}[}(###((#(}(#]{(#){}#]]{######))[({(########){]########)[}
 #>>>})..>#}{{>.(}.>[}.###[..>}.[#>>]#)>(#]>)###>#)>.>}.}###{####{.>##[)[)#>.>#
@@ -83,11 +85,11 @@
 ######}#}[]}#}#}#{#{{#}##(((#}################]###{######[#######[###]######)#
 ```
 
-You have entered the third dungeon, again standing at the bottom of the staircase where you entered (marked `<` on the top level of the map), facing north. In this dungeon, there are multiple levels, separated by single blank lines on the map. The top level has zero as its level number, with lower levels having increasing level numbers.
+The levels in the map are ordered from top to bottom. You are standing at the bottom of the staircase where you entered (marked `<` on the top level of the map), facing north.
 
-There are many other staircases here, leading down (marked `>`). Each of them connects to a staircase on the level below, leading back up (marked `<`). Whenever you walk onto a staircase, you immediately follow it up or down during the same tick. You end the tick standing on the connected staircase, facing the same direction as before. You leave the dungeon by walking onto the staircase where you entered.
+There are many other staircases on the top level, leading down (marked `>`). The bottom end of each staircase (marked `<`) leads back up to the top end. Whenever you walk onto a staircase (top or bottom), you immediately follow it to the other end during the same tick. You end the tick standing on the other end of the staircase, facing the same direction as before.
 
-After how many ticks do you leave the dungeon?
+You leave the dungeon by walking onto the staircase where you entered. After how many ticks do you leave the dungeon?
 
 
 ## Example
