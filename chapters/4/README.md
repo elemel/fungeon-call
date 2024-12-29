@@ -102,463 +102,1122 @@ After you leave the dungeon, what number is at the top of the stack?
 
 ## Example
 
-Consider a smaller dungeon:
+Consider a smaller dungeon with two levels:
 
 ```
-######}#
-]3+*7/.#
-]5]###1(
-#*<54*6)
-#}(####{
+#]#)#[}#
+#>7.%-7]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+[({][#)]
+#<)*1/1[
+[]64(31]
+###}<*)#
+###([][#
 ```
 
-Below is a log of exploring the smaller dungeon:
+Below is a log of exploring the smaller dungeon. Your position at each tick is marked `@`.
 
 ```
 Tick counter: 0
 Direction: North
 Level: 0
 
-######}#
-]3+*7/.#
-]5]###1(
-#*@54*6)
-#}(####{
+#]#)#[}#
+#>7.%-7]
+#9#%#.6#
+#@**>{*#
+###{#})#
 
 ---
 
 Tick counter: 1
-Direction: East
+Direction: North
 Level: 0
 
-######}#
-]3+*7/.#
-]5]###1(
-#*@54*6)
-#}(####{
+#]#)#[}#
+#>7.%-7]
+#@#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (1):
+  9
 
 ---
 
 Tick counter: 2
-Direction: East
-Level: 0
+Direction: North
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###1(
-#*<@4*6)
-#}(####{
+[({][#)]
+#@)*1/1[
+[]64(31]
+###}<*)#
+###([][#
 
 Stack (1):
-  5
+  9
 
 ---
 
 Tick counter: 3
-Direction: East
-Level: 0
+Direction: Northwest
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###1(
-#*<5@*6)
-#}(####{
+[({][#)]
+#@)*1/1[
+[]64(31]
+###}<*)#
+###([][#
 
-Stack (2):
-  4
-  5
+Stack (1):
+  9
 
 ---
 
 Tick counter: 4
-Direction: East
-Level: 0
+Direction: Southwest
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###1(
-#*<54@6)
-#}(####{
+[({][#)]
+#@)*1/1[
+[]64(31]
+###}<*)#
+###([][#
 
 Stack (1):
-  20
+  9
 
 ---
 
 Tick counter: 5
-Direction: East
-Level: 0
+Direction: Southeast
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###1(
-#*<54*@)
-#}(####{
+[({][#)]
+#@)*1/1[
+[]64(31]
+###}<*)#
+###([][#
 
-Stack (2):
-  6
-  20
+Stack (1):
+  9
 
 ---
 
 Tick counter: 6
 Direction: Southeast
-Level: 0
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###1(
-#*<54*@)
-#}(####{
+[({][#)]
+#<)*1/1[
+[]@4(31]
+###}<*)#
+###([][#
 
 Stack (2):
   6
-  20
+  9
 
 ---
 
 Tick counter: 7
-Direction: North
-Level: 0
+Direction: West
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###1(
-#*<54*@)
-#}(####{
+[({][#)]
+#<)*1/1[
+[]@4(31]
+###}<*)#
+###([][#
 
 Stack (2):
   6
-  20
+  9
 
 ---
 
 Tick counter: 8
 Direction: North
-Level: 0
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###@(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)*1/1[
+[]@4(31]
+###}<*)#
+###([][#
 
-Stack (3):
-  1
+Stack (2):
   6
-  20
+  9
 
 ---
 
 Tick counter: 9
-Direction: North
-Level: 0
+Direction: Northeast
+Level: 1
 
-######}#
-]3+*7/@#
-]5]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)*1/1[
+[]@4(31]
+###}<*)#
+###([][#
 
-Stack (3):
-  1
+Stack (2):
   6
-  20
+  9
 
 ---
 
 Tick counter: 10
-Direction: Southeast
-Level: 0
+Direction: Northeast
+Level: 1
 
-######}#
-]3+*7/@#
-]5]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)@1/1[
+[]64(31]
+###}<*)#
+###([][#
 
-Stack (3):
-  1
-  6
-  20
+Stack (1):
+  54
 
 ---
 
 Tick counter: 11
-Direction: East
-Level: 0
+Direction: Northwest
+Level: 1
 
-######}#
-]3+*7/@#
-]5]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)@1/1[
+[]64(31]
+###}<*)#
+###([][#
 
-Stack (3):
-  1
-  6
-  20
+Stack (1):
+  54
 
 ---
 
 Tick counter: 12
-Direction: West
-Level: 0
+Direction: South
+Level: 1
 
-######}#
-]3+*7/@#
-]5]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)@1/1[
+[]64(31]
+###}<*)#
+###([][#
 
-Stack (3):
-  1
-  6
-  20
+Stack (1):
+  54
 
 ---
 
 Tick counter: 13
-Direction: West
-Level: 0
+Direction: South
+Level: 1
 
-######}#
-]3+*7@.#
-]5]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)*1/1[
+[]6@(31]
+###}<*)#
+###([][#
 
 Stack (2):
-  6
-  20
+  4
+  54
 
 ---
 
 Tick counter: 14
-Direction: West
-Level: 0
+Direction: Northwest
+Level: 1
 
-######}#
-]3+*@/.#
-]5]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)*1/1[
+[]6@(31]
+###}<*)#
+###([][#
 
-Stack (3):
-  7
-  6
-  20
+Stack (2):
+  4
+  54
 
 ---
 
 Tick counter: 15
-Direction: West
-Level: 0
+Direction: North
+Level: 1
 
-######}#
-]3+@7/.#
-]5]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)*1/1[
+[]6@(31]
+###}<*)#
+###([][#
 
 Stack (2):
-  42
-  20
+  4
+  54
 
 ---
 
 Tick counter: 16
-Direction: West
-Level: 0
+Direction: North
+Level: 1
 
-######}#
-]3@*7/.#
-]5]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)@1/1[
+[]64(31]
+###}<*)#
+###([][#
 
 Stack (1):
-  62
+  216
 
 ---
 
 Tick counter: 17
-Direction: West
-Level: 0
+Direction: East
+Level: 1
 
-######}#
-]@+*7/.#
-]5]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)@1/1[
+[]64(31]
+###}<*)#
+###([][#
 
-Stack (2):
-  3
-  62
+Stack (1):
+  216
 
 ---
 
 Tick counter: 18
-Direction: North
-Level: 0
+Direction: East
+Level: 1
 
-######}#
-]@+*7/.#
-]5]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)*@/1[
+[]64(31]
+###}<*)#
+###([][#
 
 Stack (2):
-  3
-  62
+  1
+  216
 
 ---
 
 Tick counter: 19
-Direction: South
-Level: 0
+Direction: East
+Level: 1
 
-######}#
-]@+*7/.#
-]5]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)*1@1[
+[]64(31]
+###}<*)#
+###([][#
 
-Stack (2):
-  3
-  62
+Stack (1):
+  216
 
 ---
 
 Tick counter: 20
-Direction: South
-Level: 0
+Direction: East
+Level: 1
 
-######}#
-]3+*7/.#
-]@]###1(
-#*<54*6)
-#}(####{
+[({][#)]
+#<)*1/@[
+[]64(31]
+###}<*)#
+###([][#
 
-Stack (3):
-  5
-  3
-  62
+Stack (2):
+  1
+  216
 
 ---
 
 Tick counter: 21
-Direction: South
-Level: 0
+Direction: North
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###1(
-#@<54*6)
-#}(####{
+[({][#)]
+#<)*1/@[
+[]64(31]
+###}<*)#
+###([][#
 
 Stack (2):
-  15
-  62
+  1
+  216
 
 ---
 
 Tick counter: 22
-Direction: Northwest
-Level: 0
+Direction: Northeast
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###1(
-#@<54*6)
-#}(####{
+[({][#)]
+#<)*1/@[
+[]64(31]
+###}<*)#
+###([][#
 
 Stack (2):
-  15
-  62
+  1
+  216
 
 ---
 
 Tick counter: 23
-Direction: Northeast
-Level: 0
+Direction: Southeast
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###1(
-#@<54*6)
-#}(####{
+[({][#)]
+#<)*1/@[
+[]64(31]
+###}<*)#
+###([][#
 
 Stack (2):
-  15
-  62
+  1
+  216
 
 ---
 
 Tick counter: 24
-Direction: Southeast
-Level: 0
+Direction: Southwest
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###1(
-#@<54*6)
-#}(####{
+[({][#)]
+#<)*1/@[
+[]64(31]
+###}<*)#
+###([][#
 
 Stack (2):
-  15
-  62
+  1
+  216
 
 ---
 
 Tick counter: 25
-Direction: East
-Level: 0
+Direction: Southwest
+Level: 1
 
-######}#
-]3+*7/.#
-]5]###1(
-#@<54*6)
-#}(####{
+[({][#)]
+#<)*1/1[
+[]64(@1]
+###}<*)#
+###([][#
 
-Stack (2):
-  15
-  62
+Stack (3):
+  3
+  1
+  216
 
 ---
 
 Tick counter: 26
+Direction: Southwest
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#.6#
+#<**@{*#
+###{#})#
+
+Stack (3):
+  3
+  1
+  216
+
+---
+
+Tick counter: 27
 Direction: East
-Level: -1
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#.6#
+#<**@{*#
+###{#})#
+
+Stack (3):
+  3
+  1
+  216
+
+---
+
+Tick counter: 28
+Direction: Northwest
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#.6#
+#<**@{*#
+###{#})#
+
+Stack (3):
+  3
+  1
+  216
+
+---
+
+Tick counter: 29
+Direction: Northwest
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#@#.6#
+#<**>{*#
+###{#})#
 
 Stack (2):
-  15
-  62
+  1
+  216
+
+---
+
+Tick counter: 30
+Direction: Northwest
+Level: 0
+
+#]#)#[}#
+#>@.%-7]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (3):
+  7
+  1
+  216
+
+---
+
+Tick counter: 31
+Direction: Northeast
+Level: 0
+
+#]#)#[}#
+#>@.%-7]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (3):
+  7
+  1
+  216
+
+---
+
+Tick counter: 32
+Direction: East
+Level: 0
+
+#]#)#[}#
+#>@.%-7]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (3):
+  7
+  1
+  216
+
+---
+
+Tick counter: 33
+Direction: East
+Level: 0
+
+#]#)#[}#
+#>7@%-7]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (3):
+  7
+  1
+  216
+
+---
+
+Tick counter: 34
+Direction: East
+Level: 0
+
+#]#)#[}#
+#>7.@-7]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (2):
+  1
+  216
+
+---
+
+Tick counter: 35
+Direction: East
+Level: 0
+
+#]#)#[}#
+#>7.%@7]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (1):
+  215
+
+---
+
+Tick counter: 36
+Direction: East
+Level: 0
+
+#]#)#[}#
+#>7.%-@]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (2):
+  7
+  215
+
+---
+
+Tick counter: 37
+Direction: South
+Level: 0
+
+#]#)#[}#
+#>7.%-@]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (2):
+  7
+  215
+
+---
+
+Tick counter: 38
+Direction: South
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#.@#
+#<**>{*#
+###{#})#
+
+Stack (3):
+  6
+  7
+  215
+
+---
+
+Tick counter: 39
+Direction: South
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#.6#
+#<**>{@#
+###{#})#
+
+Stack (2):
+  42
+  215
+
+---
+
+Tick counter: 40
+Direction: Southwest
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#.6#
+#<**>{@#
+###{#})#
+
+Stack (2):
+  42
+  215
+
+---
+
+Tick counter: 41
+Direction: North
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#.6#
+#<**>{@#
+###{#})#
+
+Stack (2):
+  42
+  215
+
+---
+
+Tick counter: 42
+Direction: North
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#.@#
+#<**>{*#
+###{#})#
+
+Stack (3):
+  6
+  42
+  215
+
+---
+
+Tick counter: 43
+Direction: North
+Level: 0
+
+#]#)#[}#
+#>7.%-@]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (4):
+  7
+  6
+  42
+  215
+
+---
+
+Tick counter: 44
+Direction: Southeast
+Level: 0
+
+#]#)#[}#
+#>7.%-@]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (4):
+  7
+  6
+  42
+  215
+
+---
+
+Tick counter: 45
+Direction: Northwest
+Level: 0
+
+#]#)#[}#
+#>7.%-@]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (4):
+  7
+  6
+  42
+  215
+
+---
+
+Tick counter: 46
+Direction: Southwest
+Level: 0
+
+#]#)#[}#
+#>7.%-@]
+#9#%#.6#
+#<**>{*#
+###{#})#
+
+Stack (4):
+  7
+  6
+  42
+  215
+
+---
+
+Tick counter: 47
+Direction: Southwest
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#@6#
+#<**>{*#
+###{#})#
+
+Stack (4):
+  7
+  6
+  42
+  215
+
+---
+
+Tick counter: 48
+Direction: Southwest
+Level: 1
+
+[({][#)]
+#<)*1/1[
+[]64(31]
+###}@*)#
+###([][#
+
+Stack (4):
+  7
+  6
+  42
+  215
+
+---
+
+Tick counter: 49
+Direction: South
+Level: 1
+
+[({][#)]
+#<)*1/1[
+[]64(31]
+###}@*)#
+###([][#
+
+Stack (4):
+  7
+  6
+  42
+  215
+
+---
+
+Tick counter: 50
+Direction: East
+Level: 1
+
+[({][#)]
+#<)*1/1[
+[]64(31]
+###}@*)#
+###([][#
+
+Stack (4):
+  7
+  6
+  42
+  215
+
+---
+
+Tick counter: 51
+Direction: East
+Level: 1
+
+[({][#)]
+#<)*1/1[
+[]64(31]
+###}<@)#
+###([][#
+
+Stack (3):
+  42
+  42
+  215
+
+---
+
+Tick counter: 52
+Direction: Southeast
+Level: 1
+
+[({][#)]
+#<)*1/1[
+[]64(31]
+###}<@)#
+###([][#
+
+Stack (3):
+  42
+  42
+  215
+
+---
+
+Tick counter: 53
+Direction: Northeast
+Level: 1
+
+[({][#)]
+#<)*1/1[
+[]64(31]
+###}<@)#
+###([][#
+
+Stack (3):
+  42
+  42
+  215
+
+---
+
+Tick counter: 54
+Direction: Northeast
+Level: 1
+
+[({][#)]
+#<)*1/1[
+[]64(3@]
+###}<*)#
+###([][#
+
+Stack (4):
+  1
+  42
+  42
+  215
+
+---
+
+Tick counter: 55
+Direction: Northwest
+Level: 1
+
+[({][#)]
+#<)*1/1[
+[]64(3@]
+###}<*)#
+###([][#
+
+Stack (4):
+  1
+  42
+  42
+  215
+
+---
+
+Tick counter: 56
+Direction: Northwest
+Level: 1
+
+[({][#)]
+#<)*1@1[
+[]64(31]
+###}<*)#
+###([][#
+
+Stack (3):
+  42
+  42
+  215
+
+---
+
+Tick counter: 57
+Direction: Southwest
+Level: 1
+
+[({][#)]
+#<)*1@1[
+[]64(31]
+###}<*)#
+###([][#
+
+Stack (3):
+  42
+  42
+  215
+
+---
+
+Tick counter: 58
+Direction: South
+Level: 1
+
+[({][#)]
+#<)*1@1[
+[]64(31]
+###}<*)#
+###([][#
+
+Stack (3):
+  42
+  42
+  215
+
+---
+
+Tick counter: 59
+Direction: South
+Level: 1
+
+[({][#)]
+#<)*1/1[
+[]64(@1]
+###}<*)#
+###([][#
+
+Stack (4):
+  3
+  42
+  42
+  215
+
+---
+
+Tick counter: 60
+Direction: South
+Level: 1
+
+[({][#)]
+#<)*1/1[
+[]64(31]
+###}<@)#
+###([][#
+
+Stack (3):
+  126
+  42
+  215
+
+---
+
+Tick counter: 61
+Direction: West
+Level: 1
+
+[({][#)]
+#<)*1/1[
+[]64(31]
+###}<@)#
+###([][#
+
+Stack (3):
+  126
+  42
+  215
+
+---
+
+Tick counter: 62
+Direction: West
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#.6#
+#<**@{*#
+###{#})#
+
+Stack (3):
+  126
+  42
+  215
+
+---
+
+Tick counter: 63
+Direction: West
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#.6#
+#<*@>{*#
+###{#})#
+
+Stack (2):
+  5292
+  215
+
+---
+
+Tick counter: 64
+Direction: West
+Level: 0
+
+#]#)#[}#
+#>7.%-7]
+#9#%#.6#
+#<@*>{*#
+###{#})#
+
+Stack (1):
+  1137780
+
+---
+
+Tick counter: 65
+Direction: West
+Level: -1
+
+Stack (1):
+  1137780
 
 ---
 
 Symbol counters:
-  #  2
-  (  2
-  )  1
-  *  3
-  +  1
-  .  1
-  /  1
-  1  1
-  3  1
+  #  1
+  %  2
+  (  3
+  )  6
+  *  7
+  -  1
+  .  2
+  /  2
+  1  3
+  3  2
   4  1
-  5  2
-  6  1
-  7  1
-  <  1
-  ]  4
-  {  1
-  }  2
+  6  3
+  7  3
+  9  1
+  <  3
+  >  2
+  [  9
+  ]  7
+  {  3
+  }  4
 
-Stack (2):
-  15
-  62
+Stack (1):
+  1137780
 ```
 
-The number 15 is at the top of the stack after you leave the dungeon.
+The number 1137780 is at the top of the stack after you leave the smaller dungeon.
