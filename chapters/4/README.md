@@ -85,7 +85,7 @@ You have entered the fourth dungeon. You study the map:
 #######}#[)###{#]###########]##{##)(]###[#(]]#{)}]###])[#]###([##[(([{)}#####}
 ```
 
-The map contains two new categories of symbols: digits (marked `0` through `9`) and operators (marked `+`, `-`, `*`, `/` or `%`). You accumulate digits and operators using a stack of numbers that you keep in a ledger.
+This dungeon contains two new categories of symbols: digits (marked `0` through `9`) and operators (marked `+`, `-`, `*`, `/` or `%`). You accumulate digits and operators using a stack of numbers that you keep in a ledger.
 
 Whenever you walk onto a digit, you push that digit onto the stack. Whenever you walk onto an operator, you pop a number `b` from the stack, then pop another number `a` from the stack, then apply the operator with `a` and `b` as arguments, and finally push the result `c` onto the stack. The operators perform as follows:
 
