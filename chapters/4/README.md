@@ -87,7 +87,7 @@ You have entered the fourth dungeon. You study the map:
 
 The map contains two new categories of symbols: digits (marked `0` through `9`) and operators (marked `+`, `-`, `*`, `/` or `%`). You accumulate digits and operators using a stack of numbers that you keep in a ledger. Whenever you walk onto a digit, you push that digit onto the top of the stack. Whenever you walk onto an operator, you pop the number `b` from the top, pop the number `a` from the top, apply the operator with `a` and `b` as arguments, and push the result `c` onto the top. The `+` operator performs addition: `c = a + b`. The `-` operator performs subtraction: `c = a - b`. The `*` operator performs multiplication: `c = a * b`. The `/` operator performs floor division: `c = a // b` (rounded toward negative infinity). The `%` operator performs modulo: `c = a % b` (with `c` preserving the sign of `b`, so that `a == (a // b) * b + (a % b)`).
 
-After you leave the dungeon, what number is on top of the stack?
+After you leave the dungeon, what number is at the top of the stack?
 
 
 ## Example
@@ -551,4 +551,4 @@ Stack (2):
   62
 ```
 
-The number 15 is on top of the stack after you leave the dungeon.
+The number 15 is at the top of the stack after you leave the dungeon.
