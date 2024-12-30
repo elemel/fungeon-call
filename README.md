@@ -11,7 +11,7 @@
 
 ## Answers
 
-- [Answer to chapter 1](answers/chapters/1.txt)
-- [Answer to chapter 2](answers/chapters/2.txt)
-- [Answer to chapter 3](answers/chapters/3.txt)
-- [Answer to chapter 4](answers/chapters/4.txt)
+- [Answer to chapter 1](answers/1.txt)
+- [Answer to chapter 2](answers/2.txt)
+- [Answer to chapter 3](answers/3.txt)
+- [Answer to chapter 4](answers/4.txt)
