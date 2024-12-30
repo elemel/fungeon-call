@@ -4,7 +4,7 @@
 ## Chapters
 
 - [Chapter 1: Wallflower](chapters/1.md)
-- [Chapter 2: Shortcut](chapters/2.md)
+- [Chapter 2: Octagram](chapters/2.md)
 - [Chapter 3: Staredown](chapters/3.md)
 - [Chapter 4: Cornucopia](chapters/4.md)
 - [Chapter 5: Crossroads](chapters/5.md)
