@@ -4,11 +4,12 @@
 ## Chapters
 
 - [Chapter 1: Wallflower](chapters/1.md)
-- [Chapter 2: Octagram](chapters/2.md)
-- [Chapter 3: Staredown](chapters/3.md)
-- [Chapter 4: Cornucopia](chapters/4.md)
-- [Chapter 5: Crossroads](chapters/5.md)
-- [Chapter 6: Grain](chapters/6.md)
+- [Chapter 2: Crossroads](chapters/2.md)
+- [Chapter 3: Octagram](chapters/3.md)
+- [Chapter 4: Staredown](chapters/4.md)
+- [Chapter 5: Runecraft](chapters/5.md)
+- [Chapter 6: Cornucopia](chapters/6.md)
+- [Chapter 7: Grain](chapters/7.md)
 
 
 ## Answers
@@ -19,3 +20,4 @@
 - [Answer to chapter 4](answers/4.txt)
 - [Answer to chapter 5](answers/5.txt)
 - [Answer to chapter 6](answers/6.txt)
+- [Answer to chapter 7](answers/7.txt)
