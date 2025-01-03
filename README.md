@@ -4,9 +4,9 @@
 ## Chapters
 
 - [Chapter 1: Wallflower](chapters/1.md)
-- [Chapter 2: Crossroads](chapters/2.md)
+- [Chapter 2: Staredown](chapters/2.md)
 - [Chapter 3: Octagram](chapters/3.md)
-- [Chapter 4: Staredown](chapters/4.md)
+- [Chapter 4: Crossroads](chapters/4.md)
 - [Chapter 5: Runecraft](chapters/5.md)
 - [Chapter 6: Cornucopia](chapters/6.md)
 - [Chapter 7: Grain](chapters/7.md)
